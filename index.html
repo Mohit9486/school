@@ -4,31 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>APS Online Academy</title>
 </head>
 <body>
     <header>
-        <h1>Experience the World of Education at APS Online Academy! 🌍</h1>
+        <h1>APS Online Academy</h1>
+        <!-- <div class="mobile-menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div> -->
     </header>
+
+    <div class="whatsapp-button">
+        <a href="https://wa.me/message/GYFF4XI3P6DRI1" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <div class="topnav" id="myTopnav">
+        <a href="#demo">Demo</a>
+        <a href="#courses">Courses</a>
+        <a href="#why-choose-us">Why Choose Us</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#video-gallery">Video Gallery</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
     
-    <nav>
-        <!-- Add navigation links here if needed -->
-    </nav>
-    
+
     <main>
         <section id="intro">
             <h2>Unlock a world of learning possibilities with APS Online Academy! 🎓</h2>
             <p>From Nur to 8th Grade and beyond, we offer a wide range of online classes tailored to meet the diverse needs of students worldwide. Join our vibrant community and let your kids explore subjects like Phonics, Yoga, Vedic maths, Dance, Hindi, and so much more!</p>
+            <a class="cta-button" href="https://wa.me/message/GYFF4XI3P6DRI1" id="demo">Book a Demo</a>
         </section>
 
         <section id="intro-video">
             
-            <video controls autoplay>
-                <source src="intro-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <iframe src="https://drive.google.com/file/d/1nrNw_MOUvM2uSedKy9-8CsxVi-hRysNX/preview" type="video/mp4"></iframe>
         </section>
-        
+
+        <div id="popup-course-1" class="popup">
+            <div class="popup-content">
+                <h2>Select a Category</h2>
+                <button class="category-button" data-category="category1">Beginners</button>
+                <div class="content" id="category1-content">
+                    <p>Subject Covered: EVS, Phonics, Maths</p>
+                    <p>Age Group:  3.5 to 5 years</p>
+                    <p>Duration: 45 to 50 mins</p>
+                    <p>Classes Per Week: 3</p>
+                    <p>Charge per month: Rs 2000</p>
+                </div>
+
+                <button class="category-button" data-category="category2">Juniors</button>
+                <div class="content" id="category2-content">
+                    <p>Subject Covered: EVS, Phonics, Maths</p>
+                    <p>Age Group: 5 to 6 years</p>
+                    <p>Duration: 50 to 55 mins</p>
+                    <p>Classes Per Week: 3</p>
+                    <p>Charge per month: Rs 2500</p>
+                </div>
+                
+                <button class="category-button" data-category="category3">Class 1st to 5th</button>
+                <div class="content" id="category3-content">
+                    <p>Subject Covered: Science, English, Maths</p>
+                    <p>Duration: 1 hr</p>
+                    <p>Classes Per Week: 5</p>
+                    <p>Charge per month: Rs 3500</p>
+                </div>
+                
+                <button class="category-button" data-category="category4">Class 6th to 8th</button>
+                <div class="content" id="category4-content">
+                    <p>Subject Covered: Science, English, Maths</p>
+                    <p>Duration: 1 hr</p>
+                    <p>Classes Per Week: 5</p>
+                    <p>Charge per month: Rs 4000</p>
+                </div>
+                
+                <button class="close-button" popupId="popup-course-1">Close</button>
+            </div>
+        </div>
+
+        <div id="popup-course-2" class="popup">
+            <div class="content2">
+                <p>Duration: 45 to 50 mins</p>
+                <p>Classes Per Week: 3</p>
+                <p>Charge per month: Rs 2000</p>
+            </div>
+
+            <button class="close-button" popupId="popup-course-2">Close</button>
+        </div>
+
+        <div id="popup-course-3" class="popup">
+            <div class="content2">
+                <p>Duration: 50 to 55 mins</p>
+                <p>Classes Per Week: 2</p>
+                <p>Charge per month: Rs 1800</p>
+            </div>
+
+            <button class="close-button" popupId="popup-course-3">Close</button>
+        </div>
+
+        <div id="popup-course-4" class="popup">
+            <div class="content2">
+                <p>Duration: 50 to 55 mins</p>
+                <p>Classes Per Week: 2</p>
+                <p>Charge per month: Rs 2000</p>
+            </div>
+
+            <button class="close-button" popupId="popup-course-4">Close</button>
+        </div>
+
+        <div id="popup-course-5" class="popup">
+            <div class="content2">
+                <p>Duration: 50 to 55 mins</p>
+                <p>Classes Per Week: 2</p>
+                <p>Charge per month: Rs 2000</p>
+            </div>
+
+            <button class="close-button" popupId="popup-course-5">Close</button>
+        </div>
+
         <section id="courses">
             <h2>Courses We Offer</h2>
             <div class="cards">
@@ -39,6 +138,7 @@
                     <div class="course-info">
                         <h3>Subject Classes</h3>
                         <p>For all grades from nursery to 8th</p>
+                        <button onclick="openPopup('popup-course-1')">Learn More</button>
                     </div>
                 </div>
                 
@@ -49,6 +149,7 @@
                     <div class="course-info">
                         <h3>Hindi Classes</h3>
                         <p>For beginners</p>
+                        <button onclick="openPopup('popup-course-2')">Learn More</button>
                     </div>
                 </div>
             
@@ -59,6 +160,7 @@
                     <div class="course-info">
                         <h3>Vedic Math Classes</h3>
                         <p>Mastering Math the Vedic Way</p>
+                        <button onclick="openPopup('popup-course-3')">Learn More</button>
                     </div>
                 </div>
 
@@ -69,6 +171,7 @@
                     <div class="course-info">
                         <h3>Dance Classes</h3>
                         <p>Move, Express, Dance</p>
+                        <button onclick="openPopup('popup-course-4')">Learn More</button>
                     </div>
                 </div>
 
@@ -79,10 +182,27 @@
                     <div class="course-info">
                         <h3>Singing Classes</h3>
                         <p>Harmonize Your Dreams</p>
+                        <button onclick="openPopup('popup-course-5')">Learn More</button>
                     </div>
                 </div>
             </div>
             <!-- Add more course cards as needed -->
+        </section>
+
+        <iframe id="cal" src="https://calendar.google.com/calendar/embed?src=mohitagrawal94140%40gmail.com&ctz=Asia%2FKolkata" style="border: 0" width=50% height="600" frameborder="0" scrolling="no"></iframe>
+
+        <section id="testimonials">
+            <h2>What Kids and Parents Say</h2>
+            <div class="cards">
+                <div class="testimonial">
+                    <img src="t1.jpg" alt="Testimonial Image 1">
+                </div>
+                
+                <div class="testimonial">
+                    <img src="t2.jpg" alt="Testimonial Image 2">
+                </div>
+            </div>
+            <!-- Add more testimonials as needed -->
         </section>
         
         <section id="why-choose-us">
@@ -97,19 +217,55 @@
             </ul>
         </section>
         
-        <section id="testimonials">
-            <h2>Testimonials</h2>
-            <div class="cards">
-                <div class="testimonial">
-                    <img src="t1.jpg" alt="Testimonial Image 1">
-                </div>
-                
-                <div class="testimonial">
-                    <img src="t2.jpg" alt="Testimonial Image 2">
-                </div>
-            </div>
-            <!-- Add more testimonials as needed -->
-        </section>
+
+        <!-- Video Gallery Section -->
+<section id="video-gallery">
+    <h2>Let's Watch Some Fun Videos</h2>
+    <div class="video-container">
+        <!-- Video 1 -->
+        <iframe class="video-card" src="https://drive.google.com/file/d/144u_s_ZHTG0zjWtz-RQQ27QaG90gcL4U/preview" type="video/mp4"></iframe>
+
+        <!-- Video 2 -->
+        <iframe class="video-card" src="https://drive.google.com/file/d/1bDojHzUpeWM53UZRBfyj_f-q0sq1P83Z/preview" type="video/mp4"></iframe>
+
+        <iframe class="video-card" src="https://drive.google.com/file/d/1ORZYkdNdqeZAvCD5Sm6gUlNnx3Y94xZv/preview" type="video/mp4"></iframe>
+
+        <!-- Video 4 -->
+        <iframe class="video-card hidden" src="https://drive.google.com/file/d/1VH2U8w3zdz1rklBvtZM4XPNok3ciXiRf/preview" type="video/mp4"></iframe>
+
+        
+
+        <iframe class="video-card hidden" src="https://drive.google.com/file/d/1K9rMM7DuuUzihb0mG8GPIxo1Dvb7OB9H/preview" type="video/mp4"></iframe>
+        
+        <iframe class="video-card hidden" src="https://drive.google.com/file/d/1a46lyalOTXfbVfBehu891Hh_x1urzopY/preview" type="video/mp4"></iframe>
+
+        <iframe class="video-card hidden" src="https://drive.google.com/file/d/1-miW-yHAOB5eQf513EhMTrA_4twnsXL5/preview" type="video/mp4"></iframe>
+        
+        <iframe class="video-card hidden" src="https://drive.google.com/file/d/1KBtmC9vXKyXNCCl4MwbhwGd01qm9SpkR/preview" type="video/mp4"></iframe>
+        
+        <iframe class="video-card hidden" src="https://drive.google.com/file/d/1Unvs8mRLfwWG1S0vv90nZL265Rl25J67/preview" type="video/mp4"></iframe>
+        
+        <iframe class="video-card hidden" src="https://drive.google.com/file/d/1ydQ7vLdo5IvbyoGDvaiJQH0cTP8694FY/preview" type="video/mp4"></iframe>
+        
+        <iframe class="video-card hidden" src="https://drive.google.com/file/d/1cdCyya9-GhI211K7byzutDxCrb2eU3AR/preview" type="video/mp4"></iframe>
+        
+        <iframe class="video-card hidden" src="https://drive.google.com/file/d/1nOXv1esoumuKJJVTUwJrSsJSR8BvRL6I/preview" type="video/mp4"></iframe>
+        
+        <iframe class="video-card hidden" src="https://drive.google.com/file/d/14JVfP5jeW6hBjlbfGfetFPzCS7t6bda5/preview" type="video/mp4"></iframe>
+        
+        <iframe class="video-card hidden" src="https://drive.google.com/file/d/10w_TL2rerNM44pumFckUMov8yPkUrSyZ/preview" type="video/mp4"></iframe>
+        
+        <iframe class="video-card hidden" src="https://drive.google.com/file/d/1uls_qKO4dov8mYeV_NMmOid4PvVDm6oq/preview" type="video/mp4"></iframe>
+        
+        <iframe class="video-card hidden" src="https://drive.google.com/file/d/1M1u4CI7xiup0Ybj-FMcmtBuhXHe2n96F/preview" type="video/mp4"></iframe>
+        
+        <iframe class="video-card hidden" src="https://drive.google.com/file/d/1GhLQlsjDuSpQBgnqGxNzxD4iudG1Ya_i/preview" type="video/mp4"></iframe>
+    </div>
+    <button id="show-more">Show More</button>
+</section>
+<!-- End of Video Gallery Section -->
+
+        
     </main>
     
     <!-- ... (previous code) ... -->
@@ -118,7 +274,7 @@
         <div class="footer-content">
             <div class="play-store">
                 <a href="#"><img src="play-store.jpg" alt="Google Play Store Logo"></a>
-                <p>Download our app on <a href="#">Google Play</a> for easy access to our courses.</p>
+                <p>Download our app on <a href="#">Google Play</a> for even more fun and learning!</p>
             </div>
             <div class="contact-details">
                 <p>Email: contact@apsonlineacademy.com</p>
@@ -126,11 +282,83 @@
                 <p>WhatsApp: <a href="https://wa.me/message/GYFF4XI3P6DRI1">Click here</a></p>
             </div>
         </div>
-
         <div class="copyright">
             <p>&copy; 2023 APS Online Academy</p>
         </div>
     </footer>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        
+        function openPopup(popupId) {
+            const popup = document.getElementById(popupId);
+            if (popup) {
+                popup.style.display = 'block';
+            }
+        }
+
+        const categoryButtons = document.querySelectorAll('.category-button');
+        const contentDivs = document.querySelectorAll('.content');
+
+        contentDivs.forEach((content) => {
+            content.style.display = 'none';
+        });
+
+        // Add click event listeners to the category buttons
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Get the data-category attribute to determine which category was clicked
+                const category = button.getAttribute('data-category');
+
+                // Hide all content divs
+                contentDivs.forEach(div => {
+                    div.style.display = 'none';
+                });
+
+                // Show the content div for the selected category
+                const selectedContent = document.getElementById(`${category}-content`);
+                if (selectedContent) {
+                    selectedContent.style.display = 'block';
+                }
+            });
+        });
+
+        // Add click event listener to the close button
+        const closeButtons = document.querySelectorAll('.close-button');
+        closeButtons.forEach(closeButton => {
+            closeButton.addEventListener('click', () => {
+                const popupId = closeButton.getAttribute("popupId")
+                // Hide the popup when the close button is clicked
+                document.getElementById(popupId).style.display = 'none';
+            })
+        });
+
+
+        
+        const showMoreButton = document.getElementById("show-more");
+        const hiddenVideos = document.querySelectorAll(".video-card.hidden");
+    
+        showMoreButton.addEventListener("click", () => {
+            hiddenVideos.forEach((videoCard) => {
+                videoCard.classList.toggle("hidden");
+            });
+    
+            if (showMoreButton.textContent === "Show More") {
+                showMoreButton.textContent = "Show Less";
+            } else {
+                showMoreButton.textContent = "Show More";
+            }
+        });
+    </script>
 
 
 </body>
