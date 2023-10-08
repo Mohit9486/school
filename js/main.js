@@ -1,26 +1,42 @@
 (function ($) {
     "use strict";
+    function getUserLocation() {
+        // Make a request to ipinfo.io to get user's location
+        // fetch('https://ipinfo.io/json/?token=0b36dede6c7aa0')
+        //     .then(data => {
+        //         console.log(data);
+        //     })
+        //     .catch(error => {
+        //         console.error('Error:', error);
+        //     });
+    }
+    
 
-    const showIframeBtn = document.getElementById("showIframeBtn");
-    const overlayContainer = document.querySelector(".overlay-container");
-    const videoIframe = document.getElementById("videoIframe");
-    const closeIframeBtn = document.getElementById("closeIframeBtn");
+    function setTextAndPrice() {
+        // getUserLocation().then((res) => {
+            // let location = res;
+            let location = "IN";
+            // console.log(res);
+            let spans = document.querySelectorAll(".price-text");
+            let price;
+            spans.forEach(function(span) {
+                var india = span.getAttribute("ip");
+                var out = span.getAttribute("op");
 
-    showIframeBtn.addEventListener("click", () => {
-        // Set the video URL from your drive here
-        const videoURL = "your_video_drive_url_here";
+                if (location === "IN") {
+                    price = india + " Rs/mo"; // Price in USD for India.
+                } else {
+                    price = "$" + out; + "/mo" // Price in USD for other countries.
+                }
+                span.innerHTML = price;
+            })
+        // })
+    }
 
-        // Set the iframe src attribute to the video URL
-        videoIframe.src = videoURL;
-
-        // Show the overlay container
-        overlayContainer.style.display = "block";
-    });
-
-    closeIframeBtn.addEventListener("click", () => {
-        // Hide the overlay container when the close button is clicked
-        overlayContainer.style.display = "none";
-    });
+    setTextAndPrice();
+    
+    // Call the function with the user's location.
+    
 
     // Initiate the wowjs
     new WOW().init();

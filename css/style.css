@@ -400,7 +400,7 @@ iframe {
 }
 
 
-/*** Team ***/
+/* ** Team **
 .team-item .team-text {
     position: absolute;
     width: 250px;
@@ -419,7 +419,7 @@ iframe {
 
 .team-item:hover .team-text {
     border-color: var(--primary);
-}
+} */
 
 
 /*** Testimonial ***/
@@ -471,6 +471,26 @@ iframe {
     background: var(--dark);
 }
 
+.testinomial-text {
+    height: 7rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.testinomial-text p{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -17px;
+    overflow-y: scroll;
+}
+
+/*** image gallery ***/
+.gallery-item img {
+    height: 350px;
+}
 
 /*** Footer ***/
 .footer .btn.btn-social {
@@ -554,16 +574,11 @@ iframe {
     z-index: 1000;
 }
 
-/* .whatsapp-button img {
-    height: 5px;
-    width: 5px;
-} */
-
 .whatsapp-button a {
     display: block;
     width: 60px;
     height: 60px;
-    background-color: #25d366;  WhatsApp green
+    background-color: #25d366; /* WhatsApp green */
     border-radius: 50%;
     text-align: center;
     line-height: 60px;
@@ -573,7 +588,47 @@ iframe {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Add WhatsApp icon */
+.whatsapp-button a i {
+    margin-top: 15%;
+    margin-left: 3%;
+    font-size: 40px;
+}
+
 /* Hover effect */
 .whatsapp-button a:hover {
-    background-color: #128c7e;  
+    background-color: #128c7e; /* Hover color */
+}
+
+
+.truncated-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show only 3 lines */
+    -webkit-box-orient: vertical;
+    max-height: 3em; /* Adjust as needed */
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    text-align: center;
 }
