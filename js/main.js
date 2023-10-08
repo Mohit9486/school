@@ -33,7 +33,7 @@
         // })
     }
 
-    setTextAndPrice();
+    // setTextAndPrice();
     
     // Call the function with the user's location.
     
