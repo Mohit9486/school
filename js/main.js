@@ -80,7 +80,7 @@
     // Header carousel
     $(".header-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 1500,
+        smartSpeed: 3000,
         items: 1,
         dots: true,
         loop: true,
@@ -95,7 +95,7 @@
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 1000,
+        smartSpeed: 3000,
         margin: 24,
         dots: false,
         loop: true,
