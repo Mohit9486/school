@@ -1,37 +1,37 @@
 (function ($) {
     "use strict";
-    function getUserLocation() {
-        // Make a request to ipinfo.io to get user's location
-        // fetch('https://ipinfo.io/json/?token=0b36dede6c7aa0')
-        //     .then(data => {
-        //         console.log(data);
-        //     })
-        //     .catch(error => {
-        //         console.error('Error:', error);
-        //     });
-    }
+    // function getUserLocation() {
+    //     // Make a request to ipinfo.io to get user's location
+    //     // fetch('https://ipinfo.io/json/?token=0b36dede6c7aa0')
+    //     //     .then(data => {
+    //     //         console.log(data);
+    //     //     })
+    //     //     .catch(error => {
+    //     //         console.error('Error:', error);
+    //     //     });
+    // }
     
 
-    function setTextAndPrice() {
-        // getUserLocation().then((res) => {
-            // let location = res;
-            let location = "IN";
-            // console.log(res);
-            let spans = document.querySelectorAll(".price-text");
-            let price;
-            spans.forEach(function(span) {
-                var india = span.getAttribute("ip");
-                var out = span.getAttribute("op");
+    // function setTextAndPrice() {
+    //     // getUserLocation().then((res) => {
+    //         // let location = res;
+    //         let location = "IN";
+    //         // console.log(res);
+    //         let spans = document.querySelectorAll(".price-text");
+    //         let price;
+    //         spans.forEach(function(span) {
+    //             var india = span.getAttribute("ip");
+    //             var out = span.getAttribute("op");
 
-                if (location === "IN") {
-                    price = india + " Rs/mo"; // Price in USD for India.
-                } else {
-                    price = "$" + out; + "/mo" // Price in USD for other countries.
-                }
-                span.innerHTML = price;
-            })
-        // })
-    }
+    //             if (location === "IN") {
+    //                 price = india + " Rs/mo"; // Price in USD for India.
+    //             } else {
+    //                 price = "$" + out; + "/mo" // Price in USD for other countries.
+    //             }
+    //             span.innerHTML = price;
+    //         })
+    //     // })
+    // }
 
     // setTextAndPrice();
     
@@ -64,17 +64,17 @@
     
     
     // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
+    // $(window).scroll(function () {
+    //     if ($(this).scrollTop() > 300) {
+    //         $('.back-to-top').fadeIn('slow');
+    //     } else {
+    //         $('.back-to-top').fadeOut('slow');
+    //     }
+    // });
+    // $('.back-to-top').click(function () {
+    //     $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+    //     return false;
+    // });
 
 
     // Header carousel
@@ -94,8 +94,8 @@
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 3000,
+        autoplay: false,
+        smartSpeed: 1500,
         margin: 24,
         dots: false,
         loop: true,
