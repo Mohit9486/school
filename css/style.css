@@ -647,10 +647,13 @@ iframe {
 .video-card {
     margin: 20px;
     padding: 15px;
+    padding-bottom: 3px;
     background-color: #f0f0f0;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+    height: 290px;
+    overflow-y: scroll;
   }
   
   .video-card iframe {
@@ -663,5 +666,6 @@ iframe {
     margin-top: 10px;
     font-size: 18px;
     color: #333;
+    margin-bottom: 0px;
   }
   
