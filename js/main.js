@@ -113,6 +113,15 @@
             }
         }
     });
+
+    // Lazy load videos
+    document.addEventListener("DOMContentLoaded", function () {
+        const videos = document.querySelectorAll(".video-card iframe");
+        videos.forEach((video) => {
+            video.setAttribute("loading", "lazy");
+        });
+    });
+      
     
 })(jQuery);
 

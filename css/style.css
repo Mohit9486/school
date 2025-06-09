@@ -160,6 +160,40 @@ h6,
     }
 }
 
+/* Google Form Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 600px;
+    max-height: 90%;
+    height: 80%;
+    overflow: auto;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
 
 /*** Header ***/
 .header-carousel::before,
@@ -500,81 +534,6 @@ iframe {
     height: 350px;
 }
 
-/*** Footer ***/
-.footer .btn.btn-social {
-    margin-right: 5px;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 45px;
-    transition: .3s;
-}
-
-.footer .btn.btn-social:hover {
-    border-color: var(--primary);
-    background: var(--primary);
-}
-
-.footer .btn.btn-link {
-    display: block;
-    margin-bottom: 5px;
-    padding: 0;
-    text-align: left;
-    font-size: 16px;
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
-}
-
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 10px;
-}
-
-.footer .btn.btn-link:hover {
-    color: var(--primary) !important;
-    letter-spacing: 1px;
-    box-shadow: none;
-}
-
-.footer .form-control {
-    border-color: rgba(255,255,255,0.5);
-}
-
-.footer .copyright {
-    padding: 25px 0;
-    font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
-}
-
-.footer .copyright a {
-    color: #FFFFFF;
-}
-
-.footer .footer-menu a {
-    margin-right: 15px;
-    padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .1);
-}
-
-.footer .copyright a:hover,
-.footer .footer-menu a:hover {
-    color: var(--primary) !important;
-}
-
-.footer .footer-menu a:last-child {
-    margin-right: 0;
-    padding-right: 0;
-    border-right: none;
-}
-
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
@@ -652,20 +611,246 @@ iframe {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    height: 290px;
+    height: 500px;
     overflow-y: scroll;
   }
   
-  .video-card iframe {
+.video-card iframe {
+width: 100%;
+/*height: 200px;  Adjust the height as needed */
+border: none;
+}
+
+.video-card p {
+margin-top: 10px;
+font-size: 18px;
+color: #333;
+margin-bottom: 0px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px !important;
+    height: 40px !important; 
+    font-size: 10px;
+} 
+
+/* Video Section Styling */
+.video-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /*overflow: hidden;  Ensure no overflow */
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.video-card iframe {
     width: 100%;
-    height: 200px; /* Adjust the height as needed */
+    height: auto;
+    aspect-ratio: 9 / 16; /* Maintain 9:16 vertical aspect ratio */
     border: none;
-  }
-  
-  .video-card p {
+    border-radius: 10px;
+    max-height: 500px; /* Prevent videos from being too tall */
+    object-fit: cover; /* Ensure the video fits within the container */
+}
+
+.video-card p {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
-    margin-bottom: 0px;
-  }
-  
+}
+
+/* Carousel Image Styling */
+.owl-carousel-item img {
+    width: 100%; /* Ensures the image spans the full width of the container */
+    height: 700px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio and fills the container */
+}
+
+/* Hide the "About APS Online Academy" images on mobile devices */
+@media (max-width: 768px) {
+    .about-img {
+        display: none;
+    }
+}
+
+/* Refer & Earn Section */
+#refer-earn {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 40px 20px;
+}
+
+#refer-earn .bg-light {
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#refer-earn .bg-light:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+#refer-earn h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#refer-earn p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Careers Section */
+#careers {
+    background-color: #fff5f3;
+    border-radius: 10px;
+    padding: 40px 20px;
+}
+
+#careers h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+#careers p {
+    font-size: 16px;
+    color: #555;
+}
+
+#careers ul {
+    padding-left: 20px;
+}
+
+#careers ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#careers img {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.amp {
+    font-family: 'Georgia', 'Baskerville', serif;
+    margin: 0 0.3em; 
+    /* font-style: italic; */
+    /* font-size: 1.1em; */
+    /* letter-spacing: 0.05em; */
+    /* vertical-align: middle; */
+    /* padding: 0 0.1em; */
+    /* display: inline-block; */
+}
+
+.phonics-math-nowrap {
+    white-space: wrap;
+    margin: 0px;
+}
+
+#phonicsSideTableContainer {
+    margin-top: 30px;;
+}
+
+.course-detail-card {
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(254,93,55,0.08), 0 1.5px 6px rgba(16,55,65,0.04);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+@media (max-width: 767.98px) {
+    .course-detail-card {
+        padding: 1.2rem;
+        border-radius: 1rem;
+    }
+}
+
+.course-detail-card {
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(254,93,55,0.08), 0 1.5px 6px rgba(16,55,65,0.04);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    /* Optional: add a border for more separation */
+    border: 2px solid #ffe0d6;
+}
+@media (max-width: 767.98px) {
+    .course-detail-card {
+        padding: 1.2rem;
+        border-radius: 1rem;
+    }
+}
+
+/* ...existing code... */
+
+.reels-carousel .custom-owl-prev,
+.reels-carousel .custom-owl-next {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(254,93,55,0.10);
+    color: #FE5D37;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    border: 2px solid #FE5D37;
+}
+
+.reels-carousel .custom-owl-prev:hover,
+.reels-carousel .custom-owl-next:hover {
+    background: #FE5D37;
+    color: #fff;
+    border-color: #FE5D37;
+}
+
+.reels-carousel .custom-owl-prev {
+    left: -32px;
+}
+
+.reels-carousel .custom-owl-next {
+    right: -32px;
+}
+
+.reels-scroll {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding-bottom: 8px;
+}
+.reels-scroll > div {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    margin-right: 8px;
+    min-width: 220px;
+    max-width: 70vw;
+    flex: 0 0 auto;
+}
+
+/* Force proper carousel behavior on smaller screens */
+.reels-carousel .owl-stage-outer {
+    /* overflow: visible !important; */
+}
+
+.reels-carousel .owl-carousel .owl-item {
+    display: flex;
+    justify-content: center;
+}

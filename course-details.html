@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Course Details - APS Online Academy</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Function to update course details based on URL parameters
+        function updateCourseDetails() {
+            var courseName = getUrlParameter('course');
+
+            var courses = {
+                'Phonics Math': {
+                    image: '8.png',
+                    details: {
+                        level: 'Phonics <span class="amp">&</span> Math',
+                        classesPerWeek: 3,
+                        ageGroup: '3-8 Years',
+                        totalSessions: 66,
+                        oneOnOne: 'Available',
+                        writingActivity: 'Yes',
+                        language: 'English',
+                        costPerClass: 'One to One: ₹450<br>Group Price: ₹300'
+                    },
+                    overview: `
+                        This course is designed to build foundational skills in phonics and math. It is divided into four levels:
+                        <ul>
+                            <li><strong>Level 1 (Age 3-4.5):</strong> Letter sounds, phonemic awareness, foundational math.</li>
+                            <li><strong>Level 2 (Age 4-5.5/6):</strong> Reading short sentences, early math logic.</li>
+                            <li><strong>Level 3 (Age 5-7):</strong> Reading fluency, spelling rules, critical thinking in math.</li>
+                            <li><strong>Level 4 (Age 6-8):</strong> Comprehension, advanced math reasoning.</li>
+                        </ul>
+                    `,
+                    sections: [
+                        {
+                            title: "Level 1 (Age 3–4.5)",
+                            description: `This level serves as a fun and interactive introduction to both phonics and numbers, designed to engage early learners in developing foundational skills that will support their academic growth. The phonics component begins with teaching the sounds of individual letters, emphasizing how each letter’s sound connects to words in their everyday environment. Through hands-on activities like tracing, matching, and letter recognition games, children not only learn the alphabet but also the beginning sounds of words, helping them establish early phonemic awareness.
+                            <br><br>
+                            As they progress, learners are introduced to the important skill of identifying and filling in missing letters within words. This exercise reinforces their understanding of letter patterns, sounds, and how they form words, laying the groundwork for early reading and spelling skills. Songs, rhymes, and playful storytelling are integrated throughout the process to make learning both engaging and memorable.
+                            <br><br>
+                            In addition to phonics, children are introduced to the world of numbers through fun and hands-on activities. They explore number sense by engaging in counting activities, identifying and recognizing numbers in various contexts, and learning about basic patterns such as shapes, colors, and sequences. Simple comparisons such as "more," "less," and "equal" are taught to help children understand basic mathematical concepts in a concrete way.
+                            <br><br>
+                            The activities are designed to be playful, promoting a love of learning through movement, music, and stories. The use of visual aids, number games, and interactive math challenges ensures that the learning experience is fun while also fostering critical thinking and problem-solving skills. By the end of this level, children will have developed a strong, joyful foundation in both phonics and math that prepares them for the next stages of their educational journey.`
+                        },
+                        {
+                            title: "Level 2 (Age 4–5.5/6)",
+                            description: `At this level, children take an important leap forward in their reading journey, marking a significant milestone in their literacy development. They start to confidently blend individual letter sounds to form and read short CVC (consonant-vowel-consonant) words. This foundational skill boosts their ability to decode simple words, laying the groundwork for more advanced reading skills in the future. As their phonemic awareness improves, children begin reading simple sentences independently, growing their reading fluency and comprehension.
+                            <br><br>
+                            Alongside this, the curriculum introduces commonly used sight words, which are crucial for building reading speed and accuracy. These words are often irregular or don't follow typical phonetic rules, so recognizing them by sight helps children become more fluent readers. Basic spelling patterns are also introduced, allowing children to make connections between how words are formed and how they are spelled. This approach not only enhances reading skills but also boosts early writing abilities as children begin to apply their understanding of letter sounds and spelling patterns in their own writing.
+                            <br><br>
+                            In math, the curriculum shifts focus to foundational concepts that form the basis of early mathematical thinking. Children are introduced to simple addition and subtraction through hands-on activities that use visual aids, such as counters, blocks, and everyday objects, making abstract concepts more tangible. Real-life examples, such as sharing toys or distributing snacks, provide meaningful contexts for practicing these operations.
+                            <br><br>
+                            Additionally, children explore shapes and measurements, developing a solid understanding of geometric concepts and spatial awareness. They learn to identify and classify basic shapes like circles, squares, and triangles, as well as concepts like length, weight, and volume. Basic comparisons, such as "longer," "shorter," "heavier," and "lighter," help children start to think logically and make connections between numbers and the world around them. These activities engage their problem-solving skills in a fun and interactive way, fostering a love of learning and developing the critical thinking skills they will build upon in later stages. By the end of this level, children will have a well-rounded foundation in both reading and math, setting them up for greater academic success in the years to come.`
+                        },
+                        {
+                            title: "Level 3 (Age 5–7)",
+                            description: `At this stage, students begin to read fluently with clear understanding and confidence. They don’t just decode words — they start to make sense of what they’re reading, express thoughts, and answer questions based on the text. The focus here is on developing deeper reading skills, learning advanced spelling rules, and understanding how different letter combinations (like digraphs and vowel teams) work together to form sounds. Vocabulary building becomes more intentional, and children are encouraged to use new words in context to enhance both their speaking and writing abilities.
+                            <br><br>
+                            In math, the learning becomes more structured and thought-driven. Children engage in critical thinking tasks that go beyond basic computation. They learn to identify and differentiate between even and odd numbers, read and interpret simple graphs, and begin solving word problems that require logical reasoning. This level sets the stage for tackling more complex problems by introducing structured formats and step-by-step thinking strategies, preparing them for higher academic challenges ahead.`
+                        },
+                        {
+                            title: "Level 4 (Age 6–8)",
+                            description: `At this advanced level, learners dive deeper into reading and language with a strong focus on comprehension and writing clarity. They begin using advanced comprehension strategies to understand context, infer meaning, and think critically about what they read. Complex sentence construction becomes a key part of learning — students begin to write longer, well-structured sentences using correct grammar, punctuation, and varied vocabulary. They also learn advanced spelling rules, helping them decode and spell multisyllabic and tricky words with confidence. Grammar concepts are explored in greater depth, including parts of speech, subject-verb agreement, and sentence editing.
+                            <br><br>
+                            In math, students transition into more abstract and multi-step problem solving. They work with larger numbers and tackle topics like fractions, multiplication, and division, while also applying these skills to real-world situations. Logical reasoning becomes a core focus as children are encouraged to explain their thinking and approach problems in different ways. This level prepares them for independent academic work and sharpens their ability to connect concepts across subjects.`
+                        }
+                    ],
+                    expectations: 'Students will gain confidence in phonics, reading fluency, and foundational to advanced math skills.',
+                    faqs: [
+                        { question: '<p class="phonics-math-nowrap">What is the ideal age to start the Phonics <span class="amp">&</span> Math course?</p>', answer: 'We recommend starting as early as age 3. The course is divided into levels based on age and ability, ensuring personalized progress.' },
+                        { question: 'Will my child be able to read independently by the end of the course?', answer: 'Yes! As your child moves through the levels, they will gain the skills to read short sentences and build reading fluency confidently.' },
+                        { question: 'Is writing included in this course?', answer: 'Yes, writing is a core part of the curriculum—children begin with letter formation and gradually move toward independent sentence writing.' },
+                        { question: 'How is math introduced at such a young age?', answer: 'Through play-based activities and visual learning—children explore number sense, early logic, and comparisons in a fun, age-appropriate way.' }
+                    ]
+                },
+                'Advanced Grammar Math': {
+                    image: '9.png',
+                    details: {
+                        level: 'Advanced Grammar <span class="amp">&</span> Math',
+                        classesPerWeek: 3,
+                        ageGroup: '6-12 Years',
+                        totalSessions: 66,
+                        oneOnOne: 'Available',
+                        writingActivity: 'Yes',
+                        language: 'English',
+                        costPerClass: 'One to One: ₹500<br>Group Price: ₹350'
+                    },
+                    overview: `
+                        This course focuses on mastering grammar and math skills. It includes:
+                        <ul>
+                            <li><strong>Grammar:</strong> Sentence structure, punctuation, tenses, comprehension.</li>
+                            <li><strong>Math:</strong> Logical reasoning, analytical skills, problem-solving.</li>
+                        </ul>
+                    `,
+                    sections: [
+                        {
+                            title: "Grammar",
+                            description: `This program is designed to strengthen students' grammar and writing skills while also enhancing their understanding of math concepts. By providing targeted instruction and practice, it helps students refine their ability to communicate clearly and effectively, both in writing and verbally.
+                            <br><br>
+                            In language arts, students focus on key elements of grammar, including sentence formation, tenses, punctuation, and paragraph writing. They learn to construct grammatically correct sentences with attention to subject-verb agreement, proper word order, and the use of descriptive language. Understanding tenses (past, present, future) is emphasized, helping students communicate more precisely and coherently. Punctuation is taught as an essential tool for conveying meaning and clarity in writing, covering periods, commas, question marks, quotation marks, and other punctuation marks. Students also work on paragraph writing, learning to organize ideas logically and develop coherent thoughts. By practicing comprehension strategies, they improve their ability to understand and analyze texts, enabling them to engage deeply with a wide range of reading materials.`
+                        },
+                        {
+                            title: "Math",
+                            description: `In math, the curriculum encourages structured problem-solving and analytical thinking, essential skills for success in more advanced mathematical topics. Students learn to approach problems methodically, breaking them down into smaller steps and identifying patterns or relationships between concepts. This approach builds their confidence and helps them develop critical thinking skills. They are introduced to more complex mathematical operations, such as multi-step word problems, fractions, and basic algebra, in a way that fosters a strong conceptual understanding.
+                            <br><br>
+                            The program is designed to be flexible and adaptable, making it suitable for students from Grades 1–8, ensuring that the content matches their developmental stage. For younger students, the focus is on solidifying foundational skills, while older students are challenged with more advanced writing assignments and problem-solving tasks. By the end of the program, students will not only have improved grammar and writing skills but also a deeper comprehension of mathematical concepts, setting a strong foundation for academic success in the years ahead.`
+                        }
+                    ],
+                    expectations: 'Students will develop advanced grammar skills and strong analytical abilities in math.',
+                    faqs: [
+                        { question: 'What age group is this course designed for?', answer: 'This course is ideal for children in Grades 1–8, with personalized modules that adapt to the learner\'s current level.' },
+                        { question: 'Is writing a part of this course?', answer: 'Yes, writing is strongly emphasized. Children work on grammar-based writing tasks including structured sentences, paragraphs, and short essays.' },
+                        { question: 'What areas of grammar are covered?', answer: 'We cover sentence construction, tenses, punctuation, comprehension, and paragraph writing—boosting writing confidence and accuracy.' },
+                        { question: 'How is math made engaging in this course?', answer: 'We focus on logic-building through puzzles, real-life scenarios, and interactive problem-solving that sharpen critical thinking.' }
+                    ]
+                },
+                'Beyond Basics': {
+                    image: '10.png',
+                    details: {
+                        level: 'Beyond Basics',
+                        classesPerWeek: 3,
+                        ageGroup: '6-15 Years',
+                        totalSessions: 66,
+                        oneOnOne: 'Available',
+                        writingActivity: 'Yes',
+                        language: 'English',
+                        costPerClass: 'One to One: ₹550<br>Group Price: ₹400'
+                    },
+                    overview: `
+                        This course covers advanced subjects with personalized learning paths:
+                        <ul>
+                            <li><strong>Subjects:</strong> Hindi, Science, Social Studies.</li>
+                            <li>Grade-level content with personalized learning paths.</li>
+                        </ul>
+                    `,
+                    sections: [
+                        {
+                            title: "Hindi",
+                            description: `This program helps children learn to read, write, and speak Hindi from basic to intermediate levels through engaging, grade-aligned modules. It focuses on recognizing the Devanagari script, mastering vocabulary, forming sentences, and improving pronunciation. Students also explore grammar concepts like sentence structure and tenses, enhancing their reading comprehension and writing skills. Interactive activities such as role-playing, word games, and storytelling keep learning fun while building confidence in using Hindi in everyday situations.`
+                        },
+                        {
+                            title: "Science",
+                            description: `In this program, children explore fundamental concepts such as the human body, plants, animals, and seasons through interactive and hands-on activities. They learn about the different systems of the human body, how plants grow, the characteristics of various animals, and the changes that occur with each season. Using experiments, craft projects, and outdoor exploration, students engage with these topics in a fun and memorable way. This approach fosters curiosity, critical thinking, and a deeper understanding of the world around them.`
+                        },
+                        {
+                            title: "Social Studies",
+                            description: `This program introduces children to civics, geography, maps, festivals, and cultural knowledge through engaging stories and visuals. Students learn about the basic principles of civics, such as the role of citizens, laws, and government, in a way that's both informative and relatable. Geography lessons cover the world’s continents, countries, and regions, helping children understand map reading and key landmarks. Festivals and cultural traditions from around the world are explored through vibrant visuals and storytelling, broadening children’s understanding of diversity and fostering an appreciation for different cultures. This approach makes learning about society and the world both enjoyable and meaningful.`
+                        }
+                    ],
+                    expectations: 'Students will achieve personalized learning goals and excel in advanced subjects.',
+                    faqs: [
+                        { question: 'Is writing included in this course as well?', answer: 'Yes! Writing is integrated across subjects—students practice expression, note-taking, and answer structuring to build strong academic writing skills.' },
+                        { question: 'What’s included in the “Beyond Basics” course?', answer: 'We currently offer Hindi, Science, and Social Studies—with engaging lessons through stories, visuals, and interactive discussions.' },
+                        { question: 'Can you teach other subjects apart from the ones listed?', answer: 'Yes! The course is highly customizable. If there’s a specific subject or topic your child needs support in, we’re happy to create a personalized learning plan.' }
+                    ]
+                }
+            };
+
+            var course = courses[courseName];
+            if (course) {
+                var details = course.details;
+                document.getElementById('courseName').innerHTML = details.level;
+                // document.getElementById('courseImage').src = 'img/' + course.image;
+
+                var sideTableContainer = document.getElementById('phonicsSideTableContainer');
+                if (courseName === 'Phonics Math') {
+                    sideTableContainer.innerHTML = `
+                        <div class="shadow-sm mb-4">
+                            <h2 class="h4 py-2 px-3 bg-primary text-white rounded-top">Course Details</h2>
+                            <div class="d-none d-md-block">
+                                <table class="table table-bordered mb-0">
+                                    <tbody>
+                                        <tr>
+                                            <th>Course Levels</th>
+                                            <td>Level 1, Level 2, Level 3, Level 4</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Classes per week</th>
+                                            <td>3 ( 2 phonics and 1 math )</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Age group</th>
+                                            <td>3+, varies by level</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total sessions</th>
+                                            <td>Depends on the level</td>
+                                        </tr>
+                                        <tr>
+                                            <th>One to one</th>
+                                            <td>Available</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Writing activity</th>
+                                            <td>Yes</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Language</th>
+                                            <td>English</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- Mobile view -->
+                            <div class="d-block d-md-none p-3 bg-white border rounded-bottom">
+                                <div class="mb-2"><strong>Course Levels:</strong> Level 1, Level 2, Level 3, Level 4</div>
+                                <div class="mb-2"><strong>Classes per week:</strong> 3</div>
+                                <div class="mb-2"><strong>Age group:</strong> 3 to 4.5</div>
+                                <div class="mb-2"><strong>Total sessions:</strong> 3 months</div>
+                                <div class="mb-2"><strong>One to one:</strong> Available</div>
+                                <div class="mb-2"><strong>Writing activity:</strong> Yes</div>
+                                <div class="mb-2"><strong>Language:</strong> English</div>
+                            </div>
+                            <a href="https://wa.me/919897583114" target="_blank" class="btn btn-primary w-100 mt-3">Book Demo</a>
+                        </div>
+                    `;
+                } else {
+                    sideTableContainer.innerHTML = '';
+                }
+
+                document.getElementById('courseOverview').innerHTML = course.overview;
+                var sectionsAccordion = document.getElementById('courseSectionsAccordion');
+                course.sections.forEach(function(section, idx) {
+                    var sectionId = 'sectionCollapse' + idx;
+                    var item = `
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="sectionHeading${idx}">
+                                <button class="accordion-button ${idx === 0 ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#${sectionId}" aria-expanded="${idx === 0 ? 'true' : 'false'}" aria-controls="${sectionId}">
+                                    <div>
+                                        <strong>${section.title}</strong>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="${sectionId}" class="accordion-collapse collapse ${idx === 0 ? 'show' : ''}" aria-labelledby="sectionHeading${idx}" data-bs-parent="#courseSectionsAccordion">
+                                <div class="accordion-body">
+                                    ${section.description}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    sectionsAccordion.innerHTML += item;
+                });
+                // document.getElementById('courseExpectations').innerText = course.expectations;
+
+                var faqContainer = document.getElementById('courseFaqAccordion');
+                faqContainer.innerHTML = '';
+
+                course.faqs.forEach(function (faq, index) {
+                    var faqItem = `
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading${index + 1}">
+                                <button class="accordion-button ${index === 0 ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse${index + 1}" aria-expanded="${index === 0 ? 'true' : 'false'}" aria-controls="faqCollapse${index + 1}">
+                                    ${faq.question}
+                                </button>
+                            </h2>
+                            <div id="faqCollapse${index + 1}" class="accordion-collapse collapse ${index === 0 ? 'show' : ''}" aria-labelledby="faqHeading${index + 1}" data-bs-parent="#courseFaqAccordion">
+                                <div class="accordion-body">
+                                    ${faq.answer}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    faqContainer.innerHTML += faqItem;
+                });
+            } else {
+                document.getElementById('courseName').innerText = 'Course Not Found';
+                document.getElementById('courseOverview').innerText = 'The course you are looking for does not exist.';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCourseDetails);
+    </script>
+
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light px-4 px-lg-6 py-lg-0 rounded-pill shadow">
+            <span class="navbar-brand d-flex align-items-center">
+                <span id="courseName" class="m-0 text-primary h1 mb-0 pr-2"></span>
+            </span>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="index.html#courses" class="nav-item nav-link">Courses</a>
+                    <a href="index.html#get-in-touch" class="nav-item nav-link">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Course Details Start -->
+        <div class="container-xxl" style="background: #FFF5F3;">
+            <div class="course-detail-card shadow-lg bg-white rounded-4 mt-0 mb-10 px-4 px-lg-6 py-lg-0">
+                <!-- <h1 id="courseName" class="mb-3 display-5 text-primary"></h1> -->
+                <!-- <p class="lead mb-4" style="color: #555;">Discover the details of this course and how it can help you achieve your learning goals.</p> -->
+                <div id="phonicsSideTableContainer" class="mb-4"></div>
+                <div>
+                    <h2>Course Overview</h2>
+                    <p id="courseOverview"></p>
+                </div>
+                <div class="mt-4">
+                    <h2>Course Structure</h2>
+                    <div class="accordion" id="courseSectionsAccordion"></div>
+                </div>
+                <div class="mt-5 mb-5">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="accordion" id="courseFaqAccordion"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Course Details End -->
+
+        <!-- Get In Touch Start >
+        <div class="container-xxl py-5" id="get-in-touch">
+            <div class="container">
+                <div class="bg-light rounded">
+                    <div class="row g-0">
+                        <div class="col-lg-6 wow fadeIn d-none d-lg-block" data-wow-delay="0.1s" style="min-height: 400px;">
+                            <div class="position-relative h-100">
+                                <img class="position-absolute w-100 h-100 rounded" src="img/7.png" style="object-fit: cover;" alt="Get In Touch">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="h-100 d-flex flex-column justify-content-center p-5">
+                                <h3 class="text-primary mb-4">Get In Touch</h3>
+                                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+9897583114</p>
+                                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+8218640372</p>
+                                <p class="mb-2"><i class="fa fa-envelope me-3"></i><a href="mailto:academyapsonline@gmail.com" class="text-dark">academyapsonline@gmail.com</a></p>
+                                <p class="mb-2"><i class="fab fa-instagram me-3"></i><a href="https://www.instagram.com/apsonline.academy" target="_blank" class="text-dark">apsonline.academy</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Get In Touch End -->
+
+    </div>
+
+    <!-- WhatsApp Sticky Button -->
+    <div class="whatsapp-button" title="Talk to an expert now">
+        <a href="https://wa.me/919897583114" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
